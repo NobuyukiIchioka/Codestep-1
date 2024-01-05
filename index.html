@@ -1,37 +1,82 @@
+
 <!doctype html>
 <html lang="ja">
 <head>
 <meta charset="utf-8" >
 <title>nobuyuki-page</title>
-<!-- <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css"> -->
-<link rel="stylesheet" href="./style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
+<link rel="stylesheet" href="./css/style.css">
 <meta name="description" content="nobuyukiのページ">
 </head>
 
 <body>
 	<header>
-		<h1>Hamburger</h1>
-		<nav>
-			<ul>
-				<li>Menu</li>
-				<li>About</li>
-			</ul>
-		</nav>
+		<div class="header-container">
+			<h1>Hamburger</h1>
+			<nav>
+				<ul>
+					<li><a href="#menu">Menu</a></li>
+					<li><a href="#about">About</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 
 	<main>
 		<section class="main-visual">
 		</section>
 		
-		<div class="wrapper">
-			<section class="content">
-				<h2>Menu</h2>
-				<div></div>
-				
-    		</section>
-		</div>
-		
+		<div class="contents">
 
+			<h2><span>Menu</span></h2>
+			<section class="menu">
+				<article>
+					<h3>ＢＡＳＩＣ</h3>
+					<img src="./img/basic.png" alt="ジューシービーフハンバーガー">
+					<h4>ジューシービーフハンバーガー</h4>
+					<p>
+						１番人気！ <br class="sp">フレッシュなお肉と野菜の自慢のビーフバーガー
+					</p>
+				</article>
+				<article>
+					<h3>ＣＨＥＥＳＥ</h3>
+					<img src="./img/cheese.png" alt="オリジナルチーズバーガー">
+					<h4>オリジナルチーズバーガー</h4>
+					<p>オリジナルチーズを使ったコクがあるチーズバーガー</p>
+				</article>
+				<article>
+					<h3>ＢＢＱ</h3>
+					<img src="./img/bbq.png" alt="サマーＢＢＱバーガー">
+					<h4>サマーＢＢＱバーガー</h4>
+					<p>
+						ボリューム満点！ <br class="sp">
+						爽やかなBBQソースとハンバーグーの相性が抜群
+					</p>
+				</article>
+    		</section>
+
+			<h2><span>About</span></h2>
+			<section class="about">
+				<article>
+					<img src="./img/about-Jakub Kapusnak.jpg" alt="">
+					<div>
+						<h3><span>owner</span>ICHIOKA  NOBUYUKI</h3>
+						<p>
+							”本当に美味しくて安心できるハンバーガーを作りたい🍔”<br>
+							そんな想いを込めてスタートしました。<br>
+							お一人様でランチに、カップルでデートに、と気軽に楽しんでもらえるような<br>
+							親しみあるお店を目指しています。
+						</p>
+					</div>
+				</article>
+    		</section>
+			
+		</div><!-- contents -->
 	</main>
+
+	<footer>
+		&copy;2023 Hamburger
+	</footer>
 </body>
 </html>

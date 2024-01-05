@@ -1,151 +1,249 @@
 @charset "UTF-8";
-/* 
-html {
-  font-size: 100%;
-}
+/* グローバルスタイル */
 body {
-  color: #383e45;
-  font-size: 0.9rem;
+	font-family: 'Arial', sans-serif;
+  color: #383E45;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
-a {
-  text-decoration: none;
+
+.sp{
+  display: none;
 }
+
+/* リセットCSSを使用しているので、デフォルトのスタイルをリセット */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 img {
   max-width: 100%;
-}
-li {
-  list-style: none;
-}
-.site-title {
-  width: 120px;
-  line-height: 1px;
-  padding: 10px 0;
-}
-.site-title a {
-  display: block;
-}
-.section-title {
-  display: inline-block;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 60px;
-  border-bottom: solid 1px #383e45;
-}
-.content-title {
-  font-size: 1rem;
-  margin: 10px 0;
-}
-.wrapper {
-  max-width: 960px;
-  margin: 0 auto 100px auto;
-  padding: 0 4%;
-  text-align: center;
+  height: auto;
 }
 
-/*-------------------------------------------
-ヘッダー
--------------------------------------------*/
-#header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-}
-#header ul {
-  display: flex;
-  padding: 10px 0;
-}
-#header li {
-  margin-left: 30px;
-}
-#header li a {
-  color: #24292e;
-}
-#header li a:hover {
-  opacity: 0.7;
+p{
+  font-size: 12px;
 }
 
-/*-------------------------------------------
-Mainvisual
--------------------------------------------*/
-#mainvisual {
-  margin-bottom: 80px;
-}
-#mainvisual img {
-  width: 100%;
-  max-width: 1920px;
-  height: 600px;
-  object-fit: cover;
-}
 
-/*-------------------------------------------
-About
--------------------------------------------*/
-#about .content {
+/* ヘッダースタイル */
+header {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#about img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 30px;
-}
-#about .text {
-  text-align: left;
+  border: solid 1.5px rgba(56, 62, 69, 0.3); 
 }
 
-/*-------------------------------------------
-Bicycle
--------------------------------------------*/
-#bicycle ul {
+.header-container{
   display: flex;
   justify-content: space-between;
-}
-#bicycle li {
-  width: 32%;
+  align-items: center;
+  padding: 5px 83px;
+  width: 1277px;
 }
 
-/*-------------------------------------------
-footer
--------------------------------------------*/
-#footer {
-  font-size: 0.5rem;
-  padding: 10px 0;
+
+
+header h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+  color: white; 
+  background-color: #393E46; 
+  padding: 5px 18px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 20px;
+  font-size: 14.4px;
+}
+
+/* メインビジュアルスタイル */
+.main-visual {
+  background-image: url('../img/main-visual.jpg'); /* ここにメインビジュアルの画像パス */
+  background-size: cover;
+  background-position: center;
+  height: 658px; /* 高さはデザインに合わせて調整 */
+  margin: 0 78px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #383E45;
+  font-weight: bold;
+  transition: border-bottom 0.3s; /* 下線のトランジションを滑らかにする */
+}
+
+nav a:hover, nav a:focus {
+  border-bottom: 2px solid #383E45; /* ホバー時の下線 */
+}
+
+
+
+/* コンテンツスタイル */
+.contents {
+  margin: 27.8px 78px;
+}
+
+.menu, .about {
+  margin-bottom: 40px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 54px;
+}
+
+h2 span {
+  font-size: 32px;
+  font-weight: bold;
+  display: inline-block;
+	position: relative;
+}
+
+h2 span::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+    background-color: #383E45;
+    bottom: 8.3px;
+    left: 0.5px ;
+}
+
+/* メニューアイテムスタイル */
+article {
+  margin: 8px; 
+  display: flex;
+  flex-direction: column;
+}
+
+article h3 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 5px;
   text-align: center;
 }
 
-/*-------------------------------------------
-SP
--------------------------------------------*/
-@media screen and (max-width: 600px) {
+article img{
+  margin: 0 auto;
+  width: 405px;
+  margin-bottom: 5px;
+}
 
-  /*-------------------------------------------
-  Mainvisual
-  -------------------------------------------*/
-  #mainvisual img {
-    height: calc(100vh - 60px);
+article h4 {
+  font-size: 14.4px;
+  text-align: center;
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+}
+
+.menu article {
+  max-width: 415px;
+	width: 30%;
+}
+
+
+
+/* Aboutセクションのスタイル */
+.about {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.about article {
+  display: flex;
+  flex-direction: row;
+  gap: 30px; 
+}
+
+.about img {
+  border-radius: 50%; 
+  max-width: 109px;
+  max-height: 109px;
+}
+
+.about h3 {
+	margin: 5px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.about h3 span {
+  font-weight: bold;
+  color: #000;
+  margin-right: 1rem;
+}
+
+.about p {
+	line-height: 1.5;
+  text-align: left;
+}
+
+
+
+/* フッタースタイル */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.7em;
+}
+
+
+/* レスポンシブデザイン */
+@media (max-width: 820px) {
+  .sp{
+    display: block;
+  }
+  /* SP-ヘッダースタイル */
+
+  .header-container{
+    width: 100％;
+    /* padding: 0 78px; */
   }
 
-  /*-------------------------------------------
-  About
-  -------------------------------------------*/
-  #about .content {
+  .main-visual {
+    height: 90vh;
+  }
+
+    /* SP-メニュースタイル */
+  .menu {
+    display: flex;
     flex-direction: column;
-  }
-  #about img {
-    margin-right: 0;
+    align-items: center;  
   }
 
-  /*-------------------------------------------
-  Bicycle
-  -------------------------------------------*/
-  #bicycle ul {
-    flex-direction: column;
-  }
-  #bicycle li {
+  .menu article {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px; 
   }
-} */
+
+  /* Aboutセクションのスタイル */
+  section {
+    display: flex;
+    text-align: center !important;
+    justify-content: center;
+  }
+
+  .about article {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
